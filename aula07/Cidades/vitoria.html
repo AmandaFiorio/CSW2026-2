@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitória - Cidades</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .back-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #d32f2f;
+        }
+        .content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .city-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .city-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .description {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 30px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .download-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+        .download-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .download-links {
+            line-height: 2.5;
+        }
+        .download-links p {
+            color: #555;
+            font-size: 16px;
+        }
+        .download-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .download-links a:hover {
+            color: #d32f2f;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html" class="back-btn" title="Voltar à página inicial">🏠</a>
+    </div>
+
+    <div class="content">
+        <div class="city-header">
+            <div class="city-icon">🏙️</div>
+            <h1>Vitória</h1>
+            <div class="description">
+                A cidade de Vitória, localizada no Espírito Santo, é conhecida por sua bela paisagem e cultura rica. 
+                Com uma história fascinante e uma população acolhedora, Vitória oferece aos seus visitantes 
+                experiências únicas de praia, gastronomia e patrimônio histórico.
+            </div>
+        </div>
+
+        <img src="Images/vix.jpg" alt="Imagem de Vitória no pôr do Sol">
+
+        <div class="download-section">
+            <h2>Materiais sobre Vitória</h2>
+            <div class="download-links">
+                <p>Para você conhecer mais sobre a cidade de Vitória, clique <a href="../docs/vitoria.docx" download>aqui</a> para baixar um documento sobre vitória.</p>
+
+                <p>Clique <a href="pdf/guia_turistico_vitoria.pdf" download>aqui</a> para baixar um guia turístico da cidade de Vitória.</p>
+
+                <p>Clique <a href="zip/materiais_vitoria.zip" download>aqui</a> para baixar um arquivo zip com os demais materiais.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

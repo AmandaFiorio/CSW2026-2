@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub | Amanda Fiorio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gh-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .gh-logo {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      min-width: 200px;
+    }
+    .gh-logo svg { fill: #fff; width: 80px; height: 80px; }
+    .gh-logo a { color: #f8bbd0; font-weight: bold; font-size: 1.05rem; }
+    .gh-info { flex: 1; min-width: 260px; }
+    .badge {
+      display: inline-block;
+      background: var(--cinza);
+      border: 1px solid var(--borda);
+      border-radius: 20px;
+      padding: .2rem .7rem;
+      font-size: .85rem;
+      margin: .2rem .1rem;
+      color: var(--roxo);
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+    .gh-img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      border: 1px solid var(--borda);
+      display: block;
+      margin: .8rem 0;
+      background: #d1c4e9;
+      min-height: 120px;
+    }
+  </style>
+</head>
+<body id="topo">
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">Amanda <span>Fiorio</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="curriculo.html">Currículo</a></li>
+      <li><a href="github.html" class="ativo">GitHub</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Meu GitHub</h2>
+    <p>Aqui você encontra meus projetos de estudo, trabalhos acadêmicos e experimentos em desenvolvimento web.</p>
+
+    <div class="gh-card">
+      <div class="gh-logo">
+        <!-- Ícone do GitHub em SVG puro — sem dependência externa -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="GitHub">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303
+            3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+            0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+            C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729
+            1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305
+            3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93
+            0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+            0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405
+            1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23
+            3.285-1.23.645 1.653.24 2.873.12 3.176.765.84
+            1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475
+            5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015
+            3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592
+            24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+        <a href="https://github.com/AmandaFiorio" target="_blank" rel="noopener">@AmandaFiorio</a>
+      </div>
+
+      <div class="gh-info">
+        <h3>Tecnologias e tópicos</h3>
+        <span class="badge">HTML5</span>
+        <span class="badge">CSS3</span>
+        <span class="badge">Git</span>
+
+        <h3>Projetos em destaque</h3>
+        <div class="tabela-scroll">
+          <table>
+            <tr><th>Projeto</th><th>Descrição</th></tr>
+            <tr>
+              <td>Landing Page Pessoal</td>
+              <td>Este site — desenvolvido como trabalho para a disciplina Design de Software para Web (UVV).</td>
+            </tr>
+            <tr>
+              <td>Exercícios HTML/CSS</td>
+              <td>Práticas com CSS inline, interno e externo e HTML.</td>
+            </tr>
+          </table>
+        </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Amanda Fiorio Pereira &nbsp;|&nbsp;
+     Ciência da Computação — UVV &nbsp;|&nbsp;
+     <a href="contato.html">Entre em contato</a>
+  </p>
+</footer>
+<a class="topo" href="#topo" title="Voltar ao topo">↑</a>
+
+</body>
+</html>

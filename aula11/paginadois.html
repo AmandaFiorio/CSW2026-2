@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Dois - Pseudo-seletores</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F1EBCB;
+            color: #436A6F;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 30px 20px;
+        }
+
+        header {
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-family: 'Sedan', serif;
+            font-size: 2rem;
+            margin: 0 0 8px 0;
+            color: #436A6F;
+        }
+
+        header p {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            margin: 0;
+            color: #61888C;
+        }
+
+        /* -----------------------------------------
+           Separação clara de 2 divs (div-1 e div-2)
+           ----------------------------------------- */
+        .div-1, .div-2 {
+            background-color: #ffffff;
+            border: 3px solid #61888C;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(67, 106, 111, 0.15);
+        }
+
+        .div-1 h2:first-child, .div-2 h2:first-child {
+            border-bottom: 2px solid #AEBDA7;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #436A6F;
+            font-family: 'Sedan', serif;
+            font-size: 1.35rem;
+        }
+
+        .descricao {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 22px;
+            color: #436A6F;
+        }
+
+        /* Container de links */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        /* ----------------------------------------------------
+           PSEUDO-SELETORES:
+           - Estilização base do link
+           - ::before e ::after para aparecer a ❇ antes e depois
+           - :hover para mudar de cor ao passar o mouse
+           - :active para mudar de cor ao clicar
+           ---------------------------------------------------- */
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: 2px solid #61888C;
+            background-color: #ffffff;
+            color: #436A6F;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Evita que links visitados alterem as cores da paleta */
+        a:visited {
+            color: #436A6F;
+        }
+
+        /* Pseudo-elemento ::before - Aparecer a ❇ antes do link */
+        a::before {
+            content: "❇ ";
+            color: #BDAA83;
+            transition: color 0.25s ease-in-out;
+        }
+
+        /* Pseudo-elemento ::after - Aparecer a ❇ depois do link */
+        a::after {
+            content: " ❇";
+            color: #BDAA83;
+            transition: color 0.25s ease-in-out;
+        }
+
+        /* Pseudo-classe :hover - Mudar de cor ao passar o mouse */
+        a:hover {
+            background-color: #61888C;
+            color: #ffffff;
+            border-color: #436A6F;
+            box-shadow: 0 4px 10px rgba(67, 106, 111, 0.25);
+            transform: translateY(-2px);
+        }
+
+        a:hover::before,
+        a:hover::after {
+            color: #F1EBCB;
+        }
+
+        /* Pseudo-classe :active - Mudar de cor ao clicar */
+        a:active {
+            background-color: #BDAA83;
+            color: #ffffff;
+            border-color: #436A6F;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        a:active::before,
+        a:active::after {
+            color: #436A6F;
+        }
+
+        /* Caixa de resumo dos requisitos */
+        .painel-requisitos {
+            margin-top: 25px;
+            background-color: #F1EBCB;
+            border-left: 5px solid #436A6F;
+            padding: 16px 20px;
+            border-radius: 6px;
+        }
+
+        .painel-requisitos h3 {
+            margin: 0 0 10px 0;
+            color: #436A6F;
+            font-size: 1.05rem;
+        }
+
+        .painel-requisitos ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #436A6F;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Página Dois &mdash; Pseudo-seletores</h1>
+        <p>Exercício da Aula 11: primeiros passos com pseudo-classes, pseudo-elementos e links.</p>
+    </header>
+
+    <!-- PRIMEIRA DIV: Plataformas de Streaming de Música -->
+    <div class="div-1">
+        <h2>Primeira Div &mdash; Plataformas de Música</h2>
+        <p class="descricao">
+            Abaixo estão os links para as plataformas de música com o símbolo <strong>♬</strong>.
+            Passe o mouse ou clique para testar as mudanças de cores e veja o símbolo <strong>❇</strong> antes e depois de cada link:
+        </p>
+
+        <div class="links-container">
+            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">♬ Spotify</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">♬ YouTube</a>
+            <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer">♬ Amazon Music</a>
+        </div>
+    </div>
+
+    <!-- SEGUNDA DIV: Navegação e Informações da Aula -->
+    <div class="div-2">
+        <h2>Segunda Div &mdash; Navegação e Informações</h2>
+        <p class="descricao">
+            Esta segunda divisão demonstra a separação clara dos blocos e contém o link de navegação para retornar à página inicial:
+        </p>
+
+        <div class="links-container">
+            <a href="index.html">♬ Voltar para a Página 1 (Exercício de Fontes)</a>
+        </div>
+
+       
+    </div>
+
+</body>
+</html>
